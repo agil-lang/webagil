@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* styles.css - Compact Dark Theme */
+      :root {
+        --primary: #6c5ce7;
+        --primary-dark: #5649c0;
+        --secondary: #fd79a8;
+        --accent: #00cec9;
+        --dark: #121212;
+        --dark-gray: #1e1e1e;
+        --medium-gray: #2d3436;
+        --light: #f8f9fa;
+        --light-gray: #636e72;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: var(--dark);
+        color: var(--light);
+        line-height: 1.7;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background: var(--dark-gray);
+        padding: 2.5rem 0;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+      h1 {
+        font-size: 2.8rem;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      nav {
+        background: var(--dark-gray);
+        padding: 1rem 0;
+        border-top: 1px solid var(--medium-gray);
+        border-bottom: 1px solid var(--medium-gray);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+      }
+      nav a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+      nav a:hover {
+        color: var(--secondary);
+        background: rgba(253, 121, 168, 0.1);
+      }
+
+      main {
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        flex: 1;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--accent);
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem auto;
+      }
+
+      .card {
+        background: var(--dark-gray);
+        border: 1px solid var(--medium-gray);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+        border-color: var(--primary);
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+      }
+
+      footer {
+        background: var(--dark-gray);
+        color: var(--light);
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: auto;
+        border-top: 1px solid var(--medium-gray);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0 1rem;
+        }
+        .container {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profil.html">Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="formulir.html">Formulir</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>About Us</h2>
+        <p>
+          Welcome to our website! We are dedicated to providing high-quality
+          services and showcasing our work through this platform.
+        </p>
+      </section>
+
+      <div class="container">
+        <div class="card">
+          <h3>Our Services</h3>
+          <p>
+            We offer a wide range of services tailored to meet your needs. From
+            web development to design solutions.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="card">
+          <h3>Latest Projects</h3>
+          <p>
+            Check out our recently completed projects that demonstrate our
+            expertise and creativity.
+          </p>
+          <a href="gallery.html" class="btn">View Gallery</a>
+        </div>
+
+        <div class="card">
+          <h3>Get in Touch</h3>
+          <p>
+            Have questions or want to discuss a project? We'd love to hear from
+            you!
+          </p>
+          <a href="formulir.html" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

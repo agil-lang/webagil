@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Profile Photo Styles */
+      .profile-img-container {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 2rem;
+        perspective: 1000px;
+      }
+
+      .profile-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--primary);
+        box-shadow: 0 0 0 8px rgba(108, 92, 231, 0.2),
+          0 15px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-style: preserve-3d;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05) rotateZ(5deg);
+        box-shadow: 0 0 0 12px rgba(108, 92, 231, 0.3),
+          0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .profile-img::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 50%;
+        border: 2px dashed var(--secondary);
+        opacity: 0;
+        transition: all 0.5s ease;
+        animation: rotate 20s linear infinite;
+      }
+
+      .profile-img:hover::before {
+        opacity: 0.8;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Status Indicator */
+      .status-indicator {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: #2ecc71;
+        border-radius: 50%;
+        border: 3px solid var(--dark-gray);
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+        z-index: 2;
+      }
+
+      /* Profile Image Frame Alternative */
+      .profile-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          transparent 50%,
+          var(--primary) 50%
+        );
+        opacity: 0.1;
+        transition: all 0.5s ease;
+      }
+
+      .profile-img-container:hover .profile-frame {
+        transform: rotate(180deg);
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Profile</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profil.html">Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="formulir.html">Formulir</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="profile">
+        <div class="profile-img-container">
+          <div class="profile-frame"></div>
+          <img
+            src="image/Gambar WhatsApp 2025-03-26 pukul 13.22.14_6a5ef4c5.jpg"
+            alt="Profile Picture"
+            class="profile-img"
+          />
+          <div class="status-indicator" title="Active Now"></div>
+        </div>
+        <h2>Agil Arya</h2>
+        <p>Web Developer & Designer</p>
+
+        <div class="card" style="width: 100%; max-width: 600px">
+          <h3>About Me</h3>
+          <p>
+            I'm a passionate web developer with 5 years of experience in
+            creating beautiful and functional websites. I specialize in
+            front-end development and user experience design.
+          </p>
+
+          <h3 style="margin-top: 1rem">Skills</h3>
+          <ul style="text-align: left; margin-left: 2rem">
+            <li>main bola</li>
+          </ul>
+
+          <h3 style="margin-top: 1rem">Education</h3>
+          <p>
+            Bachelor's Degree in Computer Science - University of Technology
+            (2018)
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

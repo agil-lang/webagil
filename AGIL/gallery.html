@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Our Gallery</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profil.html">Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="formulir.html">Formulir</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="gallery-section">
+        <div class="gallery-tabs">
+          <button class="tab-btn active" onclick="openTab('photos')">
+            Photos
+          </button>
+          <button class="tab-btn" onclick="openTab('videos')">Videos</button>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div id="photos" class="tab-content active">
+          <h2><i class="fas fa-camera"></i> Photo Gallery</h2>
+          <p>Explore our collection of stunning photographs</p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.22.12_aaf731da.jpg"
+                alt="Nature"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.22.09_b6804441.jpg"
+                alt="City"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.22.12_aaf731da.jpg"
+                alt="People"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.53.57_a46a0825.jpg"
+                alt="Technology"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.53.57_a46a0825.jpg"
+                alt="Food"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="image/Gambar WhatsApp 2025-03-26 pukul 13.22.20_eae0243f.jpg"
+                alt="Travel"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Gallery Musik Tipe-X -->
+        <div id="videos" class="tab-content">
+          <h2><i class="fas fa-music"></i> Koleksi Musik Tipe-X</h2>
+          <p>Nikmati lagu-lagu terbaik dari band Tipe-X</p>
+
+          <div class="video-grid">
+            <!-- Lagu 1 -->
+            <div class="video-item">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/9Sxwn4ReJqE?rel=0&modestbranding=1"
+                  frameborder="0"
+                  allowfullscreen
+                  loading="lazy"
+                  title="Tipe-X - Salam Rindu"
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h3>Salam Rindu</h3>
+                <p>Tipe-X • Ska Reggae</p>
+                <div class="video-meta">
+                  <span><i class="fas fa-user"></i> Tipe-X</span>
+                  <span><i class="fas fa-clock"></i> 4:10</span>
+                </div>
+                <div class="music-controls">
+                  <button aria-label="Add to playlist">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <button aria-label="Like this song">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button aria-label="Share">
+                    <i class="fas fa-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lagu 2 -->
+            <div class="video-item">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/xD5t0KUm7IE?rel=0&modestbranding=1"
+                  frameborder="0"
+                  allowfullscreen
+                  loading="lazy"
+                  title="Tipe-X - Kamu Ngga Sendirian"
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h3>Kamu Nggak Sendirian</h3>
+                <p>Tipe-X • Ska</p>
+                <div class="video-meta">
+                  <span><i class="fas fa-user"></i> Tipe-X</span>
+                  <span><i class="fas fa-clock"></i> 3:55</span>
+                </div>
+                <div class="music-controls">
+                  <button aria-label="Add to playlist">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <button aria-label="Like this song">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button aria-label="Share">
+                    <i class="fas fa-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lagu 3 -->
+            <div class="video-item">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/y7CL6Z-YTB8?rel=0&modestbranding=1"
+                  frameborder="0"
+                  allowfullscreen
+                  loading="lazy"
+                  title="Tipe-X - Genit"
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h3>Genit</h3>
+                <p>Tipe-X • Ska Enerjik</p>
+                <div class="video-meta">
+                  <span><i class="fas fa-user"></i> Tipe-X</span>
+                  <span><i class="fas fa-clock"></i> 4:00</span>
+                </div>
+                <div class="music-controls">
+                  <button aria-label="Add to playlist">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <button aria-label="Like this song">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <button aria-label="Share">
+                    <i class="fas fa-share"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function openTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active");
+        }
+
+        // Remove active class from all buttons
+        const tabButtons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        // Show the current tab and mark button as active
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
